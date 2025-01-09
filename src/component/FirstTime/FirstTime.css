@@ -1,0 +1,98 @@
+/* Modal Background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, black, #2d3748);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 0.3s ease-out; /* Smooth fade-in effect */
+}
+
+/* Heading */
+.modal-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input Field */
+.modal-input {
+  width: 92%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.modal-input:focus {
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Button */
+.modal-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+    max-width: 80%; /* Adjust the width for smaller screens */
+  }
+
+  .modal-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .modal-input {
+    padding: 10px;
+  }
+
+  .modal-button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+/* Smooth Fade-in Effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
