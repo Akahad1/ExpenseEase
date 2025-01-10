@@ -1,4 +1,6 @@
+import { Providers } from "@/component/GobalRedux/Providers/Providers";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 export default function RootLayout({
   children,
@@ -8,7 +10,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="background-gradient">{children}</div>
+        <Providers>
+          {" "}
+          <div className="background-gradient">
+            {children} <Toaster />
+          </div>
+        </Providers>
       </body>
     </html>
   );

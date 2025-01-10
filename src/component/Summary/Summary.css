@@ -1,0 +1,87 @@
+.expense-summary {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.expense-list {
+  margin-top: 20px;
+}
+
+.expense-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.expense-date {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.expense-total {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.expense-categories {
+  margin-left: 20px;
+  color: black;
+}
+
+.category-summary {
+  margin-bottom: 15px;
+}
+
+.category-summary h4 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: black;
+}
+
+.expense-details {
+  margin-left: 20px;
+}
+
+.expense-detail {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.expense-detail:hover {
+  background-color: #eaeaea;
+}
+
+.expense-detail[title] {
+  position: relative;
+}
+
+.expense-detail[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
