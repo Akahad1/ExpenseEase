@@ -2,3 +2,42 @@
   background: linear-gradient(to bottom, black, #2d3748);
   min-height: 100vh;
 }
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Desktop container layout */
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 equal columns */
+  gap: 10px;
+
+  padding: 0 20px; /* Optional: Add padding for better appearance */
+}
+
+/* First div takes 4 columns */
+.col-4 {
+  grid-column: span 4;
+}
+
+/* Second div takes 8 columns */
+.col-8 {
+  grid-column: span 8;
+
+  padding: 20px;
+  text-align: center;
+}
+
+/* Mobile styles: Hide container */
+@media (max-width: 768px) {
+  .col-4,
+  .col-8 {
+    grid-column: span 12;
+  }
+}
+.color {
+  color: white;
+}
